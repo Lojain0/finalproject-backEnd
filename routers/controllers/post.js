@@ -32,10 +32,10 @@ const deletePost = async (req, res) => {
     if (del){
       res.send("deleted")
     }else{
-      res.send("cant deleted")
+      res.send("can'st deleted")
     }
-  } catch (err) {
-    res.send(err , "err");
+  } catch (error) {
+    res.send(error , "error");
   }
 };
 
@@ -54,16 +54,16 @@ const updatePost = async (req, res) => {
   }
 };
 
-const getcard = async (req,res)=>{
-  const id = req.params.id
-  console.log(id)
-try {
+// const getcard = async (req,res)=>{
+//   const id = req.params.id
+//   console.log(id)
+// try {
 
-  const posts = await postModel.find({ _id: id, }).populate("user");
- res.status(200).json(posts)
-} catch (error){
- res.send(error)
-}
-};
+//   const posts = await postModel.find({ _id: id, }).populate("user");
+//  res.status(200).json(posts)
+// } catch (error){
+//  res.send(error)
+// }
+// };
 
-module.exports = { getPost, postNewPost, deletePost , getcard , updatePost};
+module.exports = { getPost, postNewPost, deletePost  , updatePost};
