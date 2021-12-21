@@ -10,7 +10,7 @@ const getPost = async (req,res)=>{
     } catch (error){
         res.send(error)
     }
-}
+};
 
 const postNewPost= async (req, res)=>{
   const {newImg , newtext } = req.body;
@@ -23,7 +23,7 @@ const postNewPost= async (req, res)=>{
   }catch (error){
       res.send(error)
   }
-}
+};
 
 const deletePost = async (req, res) => {
   const id = req.params.id;
@@ -65,7 +65,6 @@ const updatePost = async (req, res) => {
     .catch((err) => {
       res.send(err);
     });
-
 };
 
 
