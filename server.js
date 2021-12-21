@@ -13,10 +13,12 @@ app.use(cors());
 const postRoute = require("./routers/routes/postRoute");
 const signUpRoute = require("./routers/routes/signUpRoute");
 const loginRoute  = require("./routers/routes/loginRoute")
+const LikeRoute= require("./routers/routes/likeroute")
 
 app.use(postRoute);
 app.use(signUpRoute);
 app.use(loginRoute);
+app.use(LikeRoute)
 
 
 
