@@ -1,8 +1,5 @@
-const likesPost=require("../../db/models/LikeModel")
+const likesPost = require("../../db/models/LikeModel");
 
+const addlike = async (req, res) => {};
 
-const addlike = async (req,res)=>{
-
-}
-
-    module.exports={addlike}
+module.exports = { addlike };
