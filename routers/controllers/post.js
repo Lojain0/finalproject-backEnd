@@ -52,13 +52,13 @@ const deletePost = async (req, res) => {
 const updatePost = async (req, res) => {
   const id = req.params.id;
   const user = req.token.userId;
-  let { img, text } = req.body;
+  let { text } = req.body;
   try {
     const isUser = await userModel.findOne({ _id: user });
     if (isUser) {
       const update = await postModel.findOneAndUpdate(
         { _id: id },
-        { img: img, text: text },
+        { text: text },
         { new: true }
       );
       const posts = await postModel.find({}).populate("user");
