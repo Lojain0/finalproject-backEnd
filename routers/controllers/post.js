@@ -4,7 +4,7 @@ const userModel = require("../../db/models/userModel");
 const getPost = async (req, res) => {
   try {
     const posts = await postModel.find({}).populate("user");
-    console.log(posts, "posts");
+    // console.log(posts, "posts");
     res.status(200).json(posts);
   } catch (error) {
     res.send(error);
